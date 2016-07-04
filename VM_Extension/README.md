@@ -9,7 +9,6 @@ config file to install the Agent on an existing virtual machine.
 ## Prerequisite 
 - PowerShell 3.0,  
 - Azure Module 1.3.0
-- Azure Management Compute 1.2.5)
 
 ### Use PowerShell Script to install Deep Security Extension on an existing virtual machine
 1. Copy the text below to a text file named "private.config", and customize the content.
@@ -44,15 +43,13 @@ Set-AzureSubscription -SubscriptionId <change-with-subscription-id> -CurrentStor
 # Select active subscription to be used for current session
 Select-AzureSubscription -SubscriptionId <change-with-subscription-id>
 ```
-
 3. Using the scripts to add ASM VM Extension as below:
 
-Windows Virtual Machine:
+**Windows Virtual Machine:**
 ```
 .\DeepSecurityAddExtension_ASM_Windows_sample.ps1 -privateFileName "private.config" -publicFileName "public.config" -cloudServiceName "<cloud-service-name>" -vmName "<vm-name>"
 ```
-
-Linux Virtual Machine:
+**Linux Virtual Machine:**
 ```
 .\DeepSecurityAddExtension_ASM_Linux_sample.ps1 -privateFileName "private.config" -publicFileName "public.config" -cloudServiceName "<cloud-service-name>" -vmName "<vm-name>"
 ```
@@ -73,13 +70,11 @@ Get-AzureRMResourceGroup
 # Select active subscription to be used for current session
 Select-AzureRMSubscription -SubscriptionId <change-with-subscription-id>
 ```
-
-Windows Virtual Machine::
+**Windows Virtual Machine:**
 ```
 .\DeepSecurityAddExtension_ARM_Windows_sample.ps1 -privateFileName "private.config" -publicFileName "public.config" -location "<location>" -resourceGroupName "<resource-group-name>" -vmName "<vm-name>"
 ```
-
-Linux Virtual Machine::
+**Linux Virtual Machine:**
 ```
 .\DeepSecurityAddExtension_ARM_Linux_sample.ps1 -privateFileName "private.config" -publicFileName "public.config" -location "<location>" -resourceGroupName "<resource-group-name>" -vmName "<vm-name>"
 ```
