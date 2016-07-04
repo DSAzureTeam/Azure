@@ -63,10 +63,7 @@ Login-AzureRmAccount
   
 # List subscriptions under current login account
 Get-AzureRMSubscription
-  
-# List subscriptions under current login account
-Get-AzureRMResourceGroup
-  
+    
 # Select active subscription to be used for current session
 Select-AzureRMSubscription -SubscriptionId <change-with-subscription-id>
 ```
