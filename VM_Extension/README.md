@@ -6,12 +6,14 @@ To automate the process of installing the Deep Security Agent, you can use the P
 config file to install the Agent on an existing virtual machine.
 
 
-## Prerequisite 
+## System Requirement 
 - PowerShell 3.0,  
 - Azure Module 1.3.0
 
-### Use PowerShell Script to install Deep Security Extension on an existing virtual machine
-1. Copy the text below to a text file named "private.config", and customize the content.
+## Use PowerShell Script to install Deep Security Extension on an existing virtual machine
+
+### Preparing DSM Information (Required for both ASM and ARM)
+##### 1. Copy the text below to a text file named "private.config", and customize the content.
 ```
 {
     "DSMname": "<DSM_Host>",
@@ -19,7 +21,7 @@ config file to install the Agent on an existing virtual machine.
     "policyID":""
 }
 ```
-2. Copy the text below to a text file named `private.config` (Note : remove <DSM_tenant_id> and <DSM_tenant_password> with actual value)
+##### 2. Copy the text below to a text file named `private.config` (Note : remove <DSM_tenant_id> and <DSM_tenant_password> with actual value)
 ```
 {
     "tenantID": "<DSM_tenant_id>" ,
@@ -28,8 +30,8 @@ config file to install the Agent on an existing virtual machine.
 ```
 
 ### To add ASM VM Extension 
-1. Open Azure Powershell.
-2. Login in Azure Classic (ASM) by executing these command in PowerShell:
+##### 1. Open Azure Powershell.
+##### 2. Login in Azure Classic (ASM) by executing these command in PowerShell:
 ```
 # Pop-up login frame and login into Azure
 Add-AzureAccount
@@ -43,20 +45,20 @@ Set-AzureSubscription -SubscriptionId <change-with-subscription-id> -CurrentStor
 # Select active subscription to be used for current session
 Select-AzureSubscription -SubscriptionId <change-with-subscription-id>
 ```
-3. Using the scripts to add ASM VM Extension as below:
+##### 3.  Using the scripts to add ASM VM Extension as below:
 
-**Windows Virtual Machine:**
+*Windows:*
 ```
 .\DeepSecurityAddExtension_ASM_Windows_sample.ps1 -privateFileName "private.config" -publicFileName "public.config" -cloudServiceName "<cloud-service-name>" -vmName "<vm-name>"
 ```
-**Linux Virtual Machine:**
+*Linux :*
 ```
 .\DeepSecurityAddExtension_ASM_Linux_sample.ps1 -privateFileName "private.config" -publicFileName "public.config" -cloudServiceName "<cloud-service-name>" -vmName "<vm-name>"
 ```
 
 ### To add ARM VM Extension 
-1. Open Azure Powershell.
-2. Login into Azure Resource Management by executing commands in PowerShell:
+##### 1. Open Azure Powershell.
+##### 2. Login into Azure Resource Management by executing commands in PowerShell:
 ```
 # Pop-up login frame and login into Azure
 Login-AzureRmAccount
@@ -67,11 +69,11 @@ Get-AzureRMSubscription
 # Select active subscription to be used for current session
 Select-AzureRMSubscription -SubscriptionId <change-with-subscription-id>
 ```
-**Windows Virtual Machine:**
+*Windows :*
 ```
 .\DeepSecurityAddExtension_ARM_Windows_sample.ps1 -privateFileName "private.config" -publicFileName "public.config" -location "<location>" -resourceGroupName "<resource-group-name>" -vmName "<vm-name>"
 ```
-**Linux Virtual Machine:**
+*Linux :*
 ```
 .\DeepSecurityAddExtension_ARM_Linux_sample.ps1 -privateFileName "private.config" -publicFileName "public.config" -location "<location>" -resourceGroupName "<resource-group-name>" -vmName "<vm-name>"
 ```
