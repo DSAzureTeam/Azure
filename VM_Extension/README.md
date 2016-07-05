@@ -31,7 +31,7 @@ config file to install the Agent on an existing virtual machine.
 
 ### To add ASM VM Extension 
 ##### 1. Open Azure Powershell.
-##### 2. Login in Azure Classic (ASM) by executing these command in PowerShell:
+##### 2. Login in Azure Classic (ASM) by executing these commands in PowerShell:
 ```
 # Pop-up login frame and login into Azure
 Add-AzureAccount
