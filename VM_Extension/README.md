@@ -21,7 +21,7 @@ config file to install the Deep Security VM Extension on an existing virtual mac
     "policyID":""
 }
 ```
-##### 2. Copy the text below to a text file named `private.config` (Note : remove `DSM_tenant_id` and `DSM_tenant_password` with actual value)
+##### 2. Copy the text below to a text file named `private.config` (Note : remove *DSM_tenant_id* and *DSM_tenant_password* with actual value)
 ```
 {
     "tenantID": "<DSM_tenant_id>" ,
@@ -56,7 +56,7 @@ Select-AzureSubscription -SubscriptionId <change-with-subscription-id>
 .\DeepSecurityAddExtension_ASM_Linux_sample.ps1 -privateFileName "private.config" -publicFileName "public.config" -cloudServiceName "<cloud-service-name>" -vmName "<vm-name>"
 ```
 
-### To add Deep Security VM Extension for Azure Compute (ASM)
+### To add Deep Security VM Extension for Azure Compute (ARM)
 ##### 1. Open Azure Powershell.
 ##### 2. Login into Azure Resource Management by executing commands in PowerShell:
 ```
