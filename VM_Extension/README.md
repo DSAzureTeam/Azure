@@ -2,7 +2,7 @@
 
 The repo contains in Deep Security Install Guide Azure Marketplace
 
-To automate the process of installing the Deep Security VM Extension, you can use the PowerShell script below, along with a customized JSON format
+To automate the process of installing the Deep Security VM Extension, you can use the PowerShell script in this repository, along with a customized JSON format
 config file to install the Deep Security VM Extension on an existing virtual machine.
 
 
@@ -13,7 +13,7 @@ config file to install the Deep Security VM Extension on an existing virtual mac
 ## Use PowerShell Script to install Deep Security VM Extension on an existing virtual machine
 
 ### Preparing Deep Security Manager (DSM) Information (Required for both ASM and ARM)
-##### 1. Copy the text below to a text file named `public.config`, and customize the content.
+##### 1. Copy the text below to a text file named `public.config`, and customize the content. (Note : remove *DSM_Host* and *DSM_Port* with actual value)
 ```
 {
     "DSMname": "<DSM_Host>",
