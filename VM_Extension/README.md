@@ -5,8 +5,8 @@ config file to install the Deep Security VM Extension on an existing virtual mac
 
 
 ## System Requirement 
-- PowerShell 3.0,  
-- Azure Module 1.3.0
+- [PowerShell 3.0,](https://www.microsoft.com/en-us/download/details.aspx?id=34595)
+- [Azure Module 1.3.0](https://github.com/Azure/azure-powershell/releases/tag/v1.3.0-March2016)
 
 ## Use PowerShell Script to install Deep Security VM Extension on an existing virtual machine
 
