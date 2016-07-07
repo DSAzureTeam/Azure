@@ -1,7 +1,5 @@
 # Deploying Deep Security VM Extension on Azure Virtual Machines Using PowerShell
 
-The repo contains in Deep Security Install Guide Azure Marketplace
-
 To automate the process of installing the Deep Security VM Extension, you can use the PowerShell scripts in this repository, along with a customized JSON format
 config file to install the Deep Security VM Extension on an existing virtual machine.
 
